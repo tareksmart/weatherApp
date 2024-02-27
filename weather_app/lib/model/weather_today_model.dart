@@ -24,6 +24,7 @@ required this.country
       currentTemp: json['current']['temp_c'],
       condition: json['forecast']['forecastday'][0]['day']['condition']['text'],
       country: json['location']['name'],
+      image_url:  'https:'+json['forecast']['forecastday'][0]['day']['condition']['icon'],
     );
   }
 }
