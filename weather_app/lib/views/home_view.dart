@@ -16,13 +16,17 @@ class HomeView extends StatelessWidget {
         title: const Text('Weather App'),
         actions: [
           IconButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return SearchView();
-                }));
-              },
-              icon: const Icon(Icons.search))
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SearchView();
+                  },
+                ),
+              );
+            },
+            icon: const Icon(Icons.search),
+          )
         ],
       ),
       body: BlocBuilder<WeatherCubit, WeatherState>(

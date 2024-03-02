@@ -12,7 +12,7 @@ class SearchView extends StatelessWidget {
     final weatherCub = BlocProvider.of<WeatherCubit>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('search'),
+        title: const Text('search'),
       ),
       body: Center(
         child: Padding(

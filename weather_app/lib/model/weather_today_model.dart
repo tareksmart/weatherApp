@@ -1,5 +1,5 @@
 class WeatherModel {
-  final String time;
+  final DateTime time;
   final double maxTemp;
   final double minTemp;
   final double currentTemp;
@@ -18,7 +18,7 @@ required this.country
   });
   factory WeatherModel.fromJson(json) {
     return WeatherModel(
-      time: json['current']['last_updated'],
+      time:DateTime.parse(json['current']['last_updated']) ,
       maxTemp: json['forecast']['forecastday'][0]['day']['maxtemp_c'],
       minTemp: json['forecast']['forecastday'][0]['day']['mintemp_c'],
       currentTemp: json['current']['temp_c'],
